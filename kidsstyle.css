@@ -75,7 +75,7 @@
 
       /* Hero Section */
       .hero-section {
-          background-image: url('Hero-bg.jpg'); /* This is the original background image */
+          background-image: url('bg.jpg'); /* This is the original background image */
           background-size: cover;
           background-position: center;
           height: 100vh;
