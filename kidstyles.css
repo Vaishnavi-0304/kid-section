@@ -1,0 +1,242 @@
+/* General Styles */
+        body {
+          margin: 0;
+          font-family: 'Helvetica Neue', Arial, sans-serif;
+          background-color: #f7f7f7;
+          color: #333;
+          line-height: 1.5;
+      }
+
+      header {
+          background-color: #000000;
+          padding: 10px 10px;
+          color: #fff;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000;
+      }
+
+      .nav-links {
+          list-style: none;
+          display: flex;
+          justify-content: flex-end;
+      }
+
+      .nav-links li {
+          margin: 0 15px;
+          position: relative; /* drop downing */
+      }
+
+      .nav-links a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+          color: #f7d1ba;
+      }
+
+      .logo {
+          font-size: 1.8rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          margin-right: auto;
+      }
+      /* Dropdown Menu Styles */
+      .dropdown-menu {
+          display: none;
+          position: absolute; /* Positioned below the dropdown item */
+          top: 100%; /* Align it below the dropdown link */
+          left: 0;
+          background-color: #e0e0e0; /* Background color of the dropdown */
+          list-style: none;
+          padding: 10px 0;
+          margin: 0;
+          border-radius: 5px;
+          z-index: 1; /* Ensure it appears above other elements */
+      }
+
+      .dropdown-menu li {
+          padding: 5px 10px;
+      }
+      
+      .dropdown-menu li a {
+          padding: 5px 10px;
+          color: #413939;
+          text-decoration: none;
+      }
+
+      .dropdown:hover .dropdown-menu {
+          display: block; /* Show dropdown on hover */
+      }
+
+      /* Hero Section */
+      .hero-section {
+          background-image: url('hero-bg.jpg'); /* This is the original background image */
+          background-size: cover;
+          background-position: center;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 0 20px;
+          color: #fff;
+          position: relative;
+          margin-top: 60px;
+          overflow: hidden; /* Ensure no overflow from the image */
+      }
+
+      .hero-section::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          background-image: url('https://www.bonkerscorner.com/cdn/shop/files/20240730_055354159_iOS_1600x_crop_center.jpg?v=1722412924');
+          background-size: cover;
+          background-position: center;
+          opacity: 1; /* Adjust the opacity if needed */
+          z-index: 0; /* Place it behind the text */
+      }
+
+      .hero-section h1, .hero-section p, .cta {
+          position: relative;
+          z-index: 1; /* Ensure text and button are above the image */
+      }
+
+      .hero-section h1 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+      }
+
+      .hero-section p {
+          font-size: 1.2rem;
+          margin-bottom: 30px;
+      }
+
+      .cta {
+          background-color: #333;
+          color: #fff;
+          padding: 10px 30px;
+          text-transform: uppercase;
+          text-decoration: none;
+          border-radius: 30px;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .cta:hover {
+          background-color: #000000;
+          transform: scale(1.05);
+      }
+
+      /* Collection Section */
+      .collection-section {
+          padding: 80px 20px;
+          text-align: center;
+          background-color: #fff;
+      }
+
+      .collection-section h2 {
+          font-size: 2.5rem;
+          margin-bottom: 40px;
+      }
+
+      .product-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          justify-content: center;
+          gap: 20px;
+      }
+
+      .product-item {
+          background-color: #f7f7f7;
+          padding: 20px;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          display: flex;
+          flex-direction: column; /* Stack items vertically */
+          align-items: center; /* Center items horizontally */
+          border-radius: 10px;
+      }
+
+      .product-item:hover {
+          transform: scale(1.05);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-item img {
+          width: 90%;
+          height: 400px;
+          object-fit: cover;
+          border-radius: 10px;
+          margin-bottom: 15px; 
+      }
+
+      .product-item h3, .product-item p {
+          margin: 0;
+      }
+
+      .product-item h3 {
+          font-size: 1.2rem;
+          margin-bottom: 5px;
+      }
+
+      .product-item p {
+          font-size: 1rem;
+          color: #777;
+      }
+
+      /* About Section */
+      .about-section {
+          padding: 60px 20px;
+          background-color: #f7d1ba;
+          color: #333;
+          text-align: center;
+      }
+
+      .about-section h2 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+      }
+
+      .about-section p {
+          font-size: 1.1rem;
+          max-width: 600px;
+          margin: 0 auto;
+      }
+
+      /* Contact Section */
+      .contact-section {
+          padding: 60px 20px;
+          text-align: center;
+          background-color: #fff;
+      }
+
+      .contact-section h2 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+      }
+
+      .contact-section p {
+          font-size: 1.1rem;
+          margin-bottom: 10px;
+      }
+
+      /* Footer */
+      footer {
+          background-color: #333;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+      }
+  
+ 
