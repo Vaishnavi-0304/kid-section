@@ -1,51 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--doctype html-->
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kid's Clothing Store</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta charset="utf-8">
+<title>Slider Website</title>
+<link rel="stylesheet" href="css/style.css"/>
+<!--using FontAwesome-->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+ 
+ 
 </head>
 <body>
-    <header>
-        <h1>Kid's Clothing Store</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#" class="dropdown-toggle">Girls</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#">Tops</a></li>
-                        <li><a href="#">Pants</a></li>
-                        <li><a href="#">Outerwear</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="dropdown-toggle">Boys</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Shirts</a></li>
-                        <li><a href="#">Shorts</a></li>
-                        <li><a href="#">Pants</a></li>
-                        <li><a href="#">Outerwear</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="icon"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="#" class="icon"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>Welcome to Our Kid's Clothing Store!</h2>
-            <p>Explore our collection for both girls and boys, featuring the latest styles and trends.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Kid's Clothing Store</p>
-    </footer>
-
-    <script src="script.js"></script>
-</bod
+ 
+ <section>
+  <!--top-------------------------->
+<div class="top">
+  <!--text-logo------------------->
+  <a href="#" class="text-logo">Going To internet</a>
+</div>
+  <!--left------------------------->
+<div class="left">
+  <!--img-logo--------------->
+  <img class="logo" src="images/logo.png">  
+</div>
+  <!--center------------------------->
+<div class="center">
+ 
+ <!--menu---------->
+ <div class="menu ">
+ <ul>
+ <li><a href="#">Home</a></li> 
+ <li><a href="#">About</a></li> 
+ <li><a href="#">Conatct Us</a></li> 
+ <li><a href="#">Team</a></li> 
+ <li><a href="#">Blogs</a></li> 
+  
+  
+ </ul>
+ </div>
+ <!--slider-container--------------->
+ <div class="slider-conatiner">
+  <input type="radio" name="r" id="r1" checked>
+ <input type="radio" name="r" id="r2" >
+ <input type="radio" name="r" id="r3" >
+ <input type="radio" name="r" id="r4" >
+ <!--1------------->
+ <div class="slide slide1 slide-im1"></div>
+ <!--2------------->
+ <div class="slide slide-im2"></div>
+ <!--3------------->
+ <div class="slide slide-im3"></div>
+ <!--4------------->
+ <div class="slide slide-im4"></div>
+ 
+ 
+ </div>
+<!--slides-button-->
+<div class="buttons">
+<!--1-------------------------------->
+ <label for="r1">
+<div  class="btn btn-01 ">
+<!--slider-number--> 
+<p>01</p>
+ 
+<div class="btn-img btn-img01 active-btn"></div>
+<h1>Summer Campaign</h1>
+<p>12 Picture</p>
+<p>15 colors</p>
+  
+</div>
+ </label>
+<!--2-------------------------------->
+ <label for="r2"> 
+<div  class="btn btn-02">
+<!--slider-number--> 
+<p>02</p>
+<div class="btn-img btn-img02"></div>
+<h1>Summer Campaign</h1>
+<p>12 Picture</p>
+<p>15 colors</p>
+  
+</div>
+  </label>
+<!--3-------------------------------->
+ <label for="r3">
+<div  class="btn btn-03">
+<!--slider-number--> 
+<p>03</p>
+<div class="btn-img btn-img03"></div>
+<h1>Summer Campaign</h1>
+<p>12 Picture</p>
+<p>15 colors</p>
+  
+</div>
+  </label>
+<!--4-------------------------------->
+ <label for="r4">
+<div  class="btn btn-04">
+<!--slider-number--> 
+<p>04</p>
+<div class="btn-img btn-img04"></div>
+<h1>Summer Campaign</h1>
+<p>12 Picture</p>
+<p>15 colors</p>
+  
+</div>
+  </label>
+ 
+ 
+</div>
+</div>
+  <!--right------------------------->
+<div class="right">
+  <!--menu-bar-icon------------------->
+ <div class="toggle"></div>
+  
+</div>
+  <!--bottom------------------------->
+<div class="bottom">
+ <!--copyright--------->
+ <p class="copyright">Copyright 2020</p>
+ <!--bottom-menu-------->
+ <ul class="b-menu">
+ <li><a href="#">BLOG</a></li> 
+ <li><a href="#">MODEL</a></li> 
+ <li><a href="#">COMPANY</a></li> 
+ <li><a href="#">CONTACT</a></li> 
+ </ul>
+ <!--language----------->
+ <p class="language">EN</p>
+  
+ </div>
+ 
+ 
+ </section>
+ 
+ 
+ <!--ADDING-Jquery-Link-->
+<script type="text/javascript" src="js/Jquery.js"></script>
+</body>
+</html>
