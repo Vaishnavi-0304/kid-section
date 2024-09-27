@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body style="color: black">
+   <header> 
+  <span id="navbar"> <ul id="navcontent"> <div id="name"> <li> OFFBEAT OUTLET </li></div> <li> <a class="nav_links" href="womens.html">WOMEN</a></li>
+    <li> <a class="nav_links" href="mens.html">MEN</a></li> <li> <a class="nav_links" href="accessories.html"> Accessories</a> </li> <li> <a class="nav_links" href="account.html"> Account</a></li>
+      <li> <a class="nav_links" href="contact.html"> Contact Us</a></li>
+    <li> <a class="nav_links" href="cart.html">Cart </a> </li></ul> 
+   </span> </header> 
+  <main> <section id="shop1"> 
+    <div class="slideshow">
+        <div class="slide" style="background-image: url('project1.jpg');">
+            <a href="https://example.com/page1" class="slide-link">
+                <p><a href="https://example.com/page1" class="link"> SHOP NOW </a> </p>
+            </a>
+        </div>
+        <div class="slide" style="background-image: url('project img2.jpg');">
+            <a href="https://example.com/page2" class="slide-link">
+                <p >  <a href="https://example.com/page2" class="link">SHOP NOW</a></p> 
+              </a>
+        </div>
+        <div class="slide" style="background-image: url('project img3.jpg');">
+            <a href="https://example.com/page3" class="slide-link">
+                <p > <a href="https://example.com/page3" class="link">SHOP NOW</a></p>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll('.slide');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }
+
+            showSlide(currentIndex);
+            setInterval(nextSlide, 3000); // Change slide every 3 seconds
+        });
+    </script>
+  </section> <br> <br> <br>
+    <section id="shop2">
+    <span>  <a href="women_collection.html"> <img id="imgw1"src="w1.jpg" height="600px" width="400px"> </a> <span> 
+   <span> <a href="men_collection.html"> <img id="imgm1"src="m1.jpg" height="600px" width="400px"> </a> </span>
+   <span>  <a href="kids_collection.html"> <img id="imgk1" src="k1.jpg" height="600px" width="400px"> </a> </span>
+   </section>
+    <br><br> <br> 
+
+    <section id="gallery">
+       <div class="gallery-content"> 
+        <span class="main-content"> 
+            <a href="" class="product-type"> <img src="s2.jpg" alt="image not available"> 
+             <p >3-piece men's suit <br> &#8377;5500/- </p>  </a>
+        </span>
+        <span class="main-content">
+             <a href="" class="product-type"> <img src="s3.jpg" alt="image not available"> 
+             <p>2-piece men's suit <br> &#8377;2500/- </p>  </a>
+            </span> 
+        <span class="main-content"> 
+            <a href="" class="product-type"> <img src="s4.jpg" alt="image not available"> 
+            <p >women's white sweater <br> &#8377;800/- </p>  </a>
+        </span>
+       </div> 
+       <div class="gallery-content" > 
+        <span class="main-content"> 
+            <a href="" class="product-type"> <img src="s5.jpg" alt="image not available">  
+             <p >men's beige pant <br> &#8377;1500/- </p>  </a>
+        </span>
+        <span class="main-content">
+             <a href=""class="product-type" > <img src="s6.jpg" alt="image not available">  
+             <p>A-line one piece <br> &#8377;2,000/- </p>  </a>
+            </span> 
+        <span class="main-content"> 
+            <a href="" class="product-type"> <img src="s7.jpg" alt="image not available"> 
+            <p>black off-shoulder co-ord set <br> &#8377;800/- </p>  </a>
+        </span>
+       </div>
+       <div class="gallery-content"> 
+        <span class="main-content"> 
+            <a href="" class="product-type"> <img src="s8.jpg" alt="image not available">  
+             <p >high waist baggy jeans <br> &#8377;2,000/- </p>  </a>
+        </span>
+        <span class="main-content">
+             <a href="" class="product-type"> <img src="s9.jpg" alt="image not available"> 
+             <p> chikankari white dress <br> &#8377;2,500/- </p> </a>
+            </span> 
+        <span class="main-content"> 
+            <a href="" class="product-type"> <img src="s10.jpg" alt="image not available">  
+            <p >Men's white shirt<br> &#8377;800/- </p>  </a>
+        </span>
+          </div>
+    </section>
+    
+  </main>
+<footer>  
+  <div class="footer-content">
+      <div class="footer-section">
+          <h2>About Us</h2>
+          <p>We are a leading shopping destination offering a wide range of products at the best prices. Our goal is to provide a seamless shopping experience.</p>
+      </div>
+      <div class="footer-section">
+          <h2>Quick Links</h2>
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h2>Contact Us</h2>
+          <p>Email: support@example.com</p>
+          <p>Phone: +1 (234) 567-8900</p>
+          <p>Address: 1234 Shopping St, Shop City, SC 56789</p>
+      </div>
+      <div class="footer-section">
+          <h2>Follow Us</h2>
+          <div class="social-media">
+              <a href="https://facebook.com" class="links" target="_blank" aria-label="Facebook">
+                  <img src="facebook-icon.png" alt="Facebook">
+              </a>
+              <a class="links" href="https://twitter.com" target="_blank" aria-label="Twitter">
+                  <img src="twitter-icon.png" alt="Twitter">
+              </a>
+              <a class="links" href="https://instagram.com" target="_blank" aria-label="Instagram">
+                  <img src="instagram-icon.png" alt="Instagram">
+              </a>
+              <a class="links" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                  <img src="linkedin-icon.png" alt="LinkedIn">
+              </a>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2024 Off Beat. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
