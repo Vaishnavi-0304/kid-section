@@ -1,1 +1,1 @@
-# kid-section
+kid-section
