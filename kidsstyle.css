@@ -75,7 +75,7 @@
 
       /* Hero Section */
       .hero-section {
-          background-image: url('bg.jpg'); /* This is the original background image */
+          background-image: url('Hero-bg.jpg'); /* This is the original background image */
           background-size: cover;
           background-position: center;
           height: 100vh;
@@ -99,7 +99,7 @@
           transform: translate(-50%, -50%);
           width: 100%;
           height: 100%;
-          background-image: url('https://www.bonkerscorner.com/cdn/shop/files/20240730_055354159_iOS_1600x_crop_center.jpg?v=1722412924');
+          background-image: url('https://i0.wp.com/bluejay.com.my/wp-content/uploads/2021/12/Kids-clothes-Hong-Kong-seed.jpg?resize=800%2C460&ssl=1');
           background-size: cover;
           background-position: center;
           opacity: 1; /* Adjust the opacity if needed */
