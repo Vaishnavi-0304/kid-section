@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tops Collection</title>
+    <link rel="stylesheet" href="womenstyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Offbeat Outlet</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#categories">Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dresses.html">Dresses</a></li>
+                        <li><a href="tops.html">Tops</a></li>
+                        <li><a href="bottoms.html">Bottoms</a></li>
+                        <li><a href="jackets.html">Outerwear</a></li>
+                        <li><a href="#accessories">Accessories</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="tops" class="collection-section">
+        <h2>Tops Collection</h2>
+        <div class="product-grid" id="productGrid">
+        </div> <!-- Empty container to populate products -->
+    </section>
+    <script>
+        function viewProduct(image, name, price, description) {
+            const product = {
+                image: image,
+                name: name,
+                price: price,
+                description: description
+            };
+            // Store the product data in localStorage
+            localStorage.setItem('selectedProduct', JSON.stringify(product));
+    
+            // Redirect to the product details page
+            window.location.href = 'product.html';
+        }
+    </script>
+    
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>At Offbeat Outlet, we believe in timeless style and unparalleled quality. Our collections are designed to empower women and enhance their natural beauty.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Email: contact@OffbeatOutlet.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Offbeat Outlet. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
