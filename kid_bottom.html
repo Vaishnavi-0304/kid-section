@@ -1,70 +1,175 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tops Collection</title>
-    <link rel="stylesheet" href="womenstyle.css">
+    <title>Product Page - Clothing</title>
+    <link rel="stylesheet" href="main_product.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Offbeat Outlet</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#categories">Categories</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="dresses.html">Dresses</a></li>
-                        <li><a href="tops.html">Tops</a></li>
-                        <li><a href="bottoms.html">Bottoms</a></li>
-                        <li><a href="jackets.html">Outerwear</a></li>
-                        <li><a href="#accessories">Accessories</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="tops" class="collection-section">
-        <h2>Tops Collection</h2>
-        <div class="product-grid" id="productGrid">
-        </div> <!-- Empty container to populate products -->
-    </section>
-    <script>
-        function viewProduct(image, name, price, description) {
-            const product = {
-                image: image,
-                name: name,
-                price: price,
-                description: description
-            };
-            // Store the product data in localStorage
-            localStorage.setItem('selectedProduct', JSON.stringify(product));
     
-            // Redirect to the product details page
-            window.location.href = 'product.html';
-        }
-    </script>
+    <header> 
+        <span id="navbar"> <ul id="navcontent"> <div id="name"> <li> OFFBEAT OUTLET </li></div> <li> 
+          <div class="dropdown">
+             <a href="newin.html" class="nav_links"> NEW IN </a>
+              <div class="dropdown-content">
+                  <a href="newin_croptop.html" onclick="displaySelected('NEW IN', 'Crop tops')">Crop tops</a>
+                  <a href="newin_kurti.html" onclick="displaySelected('NEW IN', 'Women short kurtis')"> Women short kurtis</a>
+                  <a href="newin_oversized.html" onclick="displaySelected('NEW IN', 'oversized t-shirts')">oversized t-shirts</a>
+                  <a href="newin_cargo.html" onclick="displaySelected('NEW IN', 'Latest Cargo')"> Latest Cargo jeans</a>
+                  </div>
+          </div>
+      </li>
+          <li>
+              <div class="dropdown">
+                  <a href="" class="nav_links"> WOMEN </a>
+              <div class="dropdown-content">
+                  <a href="dresses.html" onclick="displaySelected('WOMEN', 'Dresses')">Dresses</a>
+                  <a href="tops.html" onclick="displaySelected('WOMEN', 'Tops')"> Tops</a>
+                  <a href="bottoms.html" onclick="displaySelected('WOMEN', 'Bottoms')">Bottoms</a>
+                  <a href="jackets.html" onclick="displaySelected('WOMEN', 'Outwears')"> Jackets</a>
+                  </div> </div> </li>
+           <li>  <div class="dropdown">
+              <a href="" class="nav_links"> MEN</a>
+              <div class="dropdown-content">
+                  <a href="t-shirts.html" onclick="displaySelected('MEN', 'Ethnic Wear')">T-shirts</a>
+                  <a href="shirts.html" onclick="displaySelected('MEN', 'T-shirts')"> Shirts</a>
+                  <a href="shoes.html" onclick="displaySelected('MEN', 'Shirts')">Shoes</a>
+                <!-- <a href="#" onclick="displaySelected('MEN', 'Bottom')">Bottoms</a>-->
+                  </div> </div>
+           </li>
+            <li> 
+              <div class="dropdown">
+                  <a href="" class="nav_links"> KIDS</a>
+             <div class="dropdown-content">
+                 <a href="kidsTops&Tshirts.html" onclick="displaySelected('KIDS', 'T-shirts')">T-shirts & tops</a>
+                 <a href="kiddresses.html" onclick="displaySelected('KIDS', 'Sets-Suits')"> Dresses</a>
+                 <a href="kidsbottoms.html" onclick="displaySelected('KIDS', 'Bottoms')">Bottoms</a>
+                 <a href="kidsshoes.html" onclick="displaySelected('KIDS', 'Frocks & Dresses')">Shoes </a>
+               <!-- <a href="#" onclick="displaySelected('KIDS', 'Sweatshirts & Jackets')">Sweatshirts & Jackets </a>--> 
+              </div> </div> 
+            </li>
+          <li> 
+              <a class="nav_links" href="cart1.html">CART </a>
+          </li> 
+          </ul>  <p id="selectedItem"></p>
+         </span>  <script>
+          function displaySelected(category, item) {
+              const display = document.getElementById("selectedItem");
+              display.textContent = `You selected: ${item} from ${category}`;
+          }
+      </script> </header> 
     
-    <section id="about" class="about-section">
-        <h2>About Us</h2>
-        <p>At Offbeat Outlet, we believe in timeless style and unparalleled quality. Our collections are designed to empower women and enhance their natural beauty.</p>
-    </section>
+    <!-- Image Slideshow -->
+    <div class="slideshow-container">
+        <img id="slideshow-image" src="s2.jpg" alt="Product Image" style="width:100%">
+       <!--<img id="slideshow-image-2" src="image2.jpg" alt="Product Image" style="width:100%; display:none;"> --> 
+        <div class="navigation">
+          <!--  <button onclick="prevImage()">&#10094; Previous</button>
+            <button onclick="nextImage()">Next &#10095;</button>-->
+        </div>
+    </div>
 
-    <section id="contact" class="contact-section">
-        <h2>Contact Us</h2>
-        <p>Email: contact@OffbeatOutlet.com</p>
-        <p>Phone: (123) 456-7890</p>
-    </section>
+    <!-- Product Details -->
+    <div id="product-detail">
+        <h2 id="product-name">3-piece men's suit</h2>
+        <p>Price: <span id="product-price">50</span> USD</p>
+        <p>Description: Elevate your style with our Classic 3-Piece Men's Suit, designed for the modern gentleman who values sophistication and versatility. This meticulously tailored suit features a timeless cut that flatters all body types, ensuring you look your best for any occasion.
 
-    <footer>
-        <p>&copy; 2024 Offbeat Outlet. All Rights Reserved.</p>
-    </footer>
+            Key Features:
+            
+            Premium Fabric: Crafted from high-quality wool blend, this suit offers both comfort and durability, keeping you cool in warmer weather and warm in cooler climates.
+            
+            Tailored Fit:  features a tailored silhouette with a single-breasted design, notch lapels, and a classic button closure, creating a sharp and polished look.
+            
+            Care Instructions: Dry clean only to maintain the suit's quality and shape.</p>
+        
+        <!-- Size Selection -->
+        <label for="size">Select Size:</label>
+        <select id="size">
+            <option value="S">S - Small</option>
+            <option value="M">M - Medium</option>
+            <option value="L">L - Large</option>
+            <option value="XL">XL - Extra Large</option>
+        </select>
+        <button onclick="showSizeChart()">Size Chart</button>
+        
+        <button onclick="addToCart()">Add to Cart</button>
+        <button onclick="openCheckout()">Go to Cart</button>
+        <button onclick="shopNow()">Shop Now</button>
+    </div>
 
-    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+    <!-- Size Chart Modal -->
+    <div id="size-chart-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Size Chart</h2>
+            <table>
+                <tr>
+                    <th>Size</th>
+                    <th>Chest (inches)</th>
+                    <th>Waist (inches)</th>
+                    <th>Length (inches)</th>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>34-36</td>
+                    <td>28-30</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>38-40</td>
+                    <td>32-34</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>42-44</td>
+                    <td>36-38</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>XL</td>
+                    <td>46-48</td>
+                    <td>40-42</td>
+                    <td>29</td>
+                </tr>
+            </table>
+            <button onclick="closeSizeChart()">Close</button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Enter Your Address</h2>
+            <input type="text" id="address" placeholder="Your Address" required>
+            <input type="text" id="city" placeholder="City" required>
+            <input type="text" id="state" placeholder="State" required>
+            <input type="text" id="zip" placeholder="ZIP Code" required>
+            <h3>Select Payment Method:</h3>
+            <select id="payment-method">
+                <option value="Credit Card">Credit Card</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+                <option value="Cash on Delivery">Cash on Delivery</option> <!-- Added Cash on Delivery option -->
+            </select>
+            <button onclick="confirmOrder()">Confirm Order</button>
+            <button onclick="closePaymentModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Order Confirmed!</h2>
+            <p id="confirmation-message"></p>
+            <button onclick="closeConfirmation()">Close</button>
+        </div>
+    </div>
+
+    <script src="main_product.js"></script>
 </body>
 </html>
+
+   
